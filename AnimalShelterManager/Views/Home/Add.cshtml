@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Редактирование</title>
+</head>
+<body>
+    <div>
+        <h3>Редактирование данных Контакта</h3>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.Contact.Id" name="Id" />
+            <table>
+                <tr>
+                    <td><p>Введите имя: </p></td>
+                    <td><input type="text" value="" name="FullName" /> </td>
+                </tr>
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

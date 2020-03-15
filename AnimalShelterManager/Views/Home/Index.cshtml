@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Список Контактов</title>
+</head>
+<body>
+    <div>
+        <h3>Список Контактов</h3>
+        <table>
+            <tr class="header">
+                <td><p>Полное имя Контакта</p></td>
+                <td></td>
+            </tr>
+            @foreach (var c in ViewBag.Contacts)
+            {
+                <tr>
+                    <td><p>@c.FullName</p></td>
+                    <td><p><a href="/Home/Edit/@c.Id">Изменить</a></p></td>
+                    <td><p><a href="/Home/Delete/@c.Id">Удалить</a></p></td>
+                </tr>
+            }
+            <tr>
+                <td><p><a href="/Home/Add">Добавить новую запись</a></p></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
