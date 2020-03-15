@@ -1,0 +1,7 @@
+# Visual Studio
+/.vs
+# NuGet Packages https://stackoverflow.com/questions/32516453/should-github-repo-also-have-nuget-packages-folder
+packages/**/*
+!packages/repositories.config
+# Other
+readme.txt
